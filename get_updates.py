@@ -24,4 +24,4 @@ def print_new_messages(token):
                 offset = update["update_id"] + 1
         time.sleep(1)  # Esperar 1 segundo antes de obtener nuevas actualizaciones
 
-print_new_messages(TOKEN)
+print_new_messages(creds.TOKEN)

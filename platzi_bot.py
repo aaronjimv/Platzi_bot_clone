@@ -16,7 +16,7 @@ def send_messages(chat_id, text):
     return response
 
 def get_openai_response(prompt):
-    model_engine = "FINE_TUNED_MODEL_NAME" # nombre del modelo en playground
+    model_engine = creds.model_ft # nombre del modelo en playground
     response = openai.Completion.create(
         engine = model_engine,
         prompt = prompt,

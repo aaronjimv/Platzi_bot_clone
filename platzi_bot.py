@@ -1,18 +1,16 @@
 import openai
 import requests
 import time
-
-openai.api_key = "OPENAI_API_KEY"
-TOKEN = "TELEGRAM_TOKEN"
+import creds
 
 def get_updates(offset):
-    url = f"https://api.telegram.org/bot{TOKEN}/getUpdates"
+    url = f"https://api.telegram.org/bot{creds.TOKEN}/getUpdates"
     params = {"timeout": 100, "offset": offset}
     response = requests.get(url, params=params)
     return response.json()["result"]
 
 def send_messages(chat_id, text):
-    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+    url = f"https://api.telegram.org/bot{creds.TOKEN}/sendMessage"
     params = {"chat_id": chat_id, "text": text}
     response = requests.post(url, params=params)
     return response

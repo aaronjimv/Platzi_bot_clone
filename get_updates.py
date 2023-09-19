@@ -1,5 +1,6 @@
 import requests
 import time
+import creds
 
 def get_updates(token, offset=None):
     url = f"https://api.telegram.org/bot{token}/getUpdates"
@@ -23,5 +24,4 @@ def print_new_messages(token):
                 offset = update["update_id"] + 1
         time.sleep(1)  # Esperar 1 segundo antes de obtener nuevas actualizaciones
 
-token = "TELEGRAM_TOKEN"
-print_new_messages(token)
+print_new_messages(TOKEN)

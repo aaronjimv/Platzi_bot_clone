@@ -3,7 +3,7 @@
 
 This repository contains a Telegram bot capable of responding to chat messages using the OpenAI language model. It continuously checks for new messages in a Telegram chat and generates responses based on user input.
 
-The fine tuning was carried out with the openAI platform, the dataset contains numerous questions and answers about Platzi, an educational website in the Spanish language.
+The fine tuning was carried out with the openAI platform, the dataset contains numerous questions and answers about [Platzi](https://platzi.com), an educational website in the Spanish language.
 
 ## Getting Started
 

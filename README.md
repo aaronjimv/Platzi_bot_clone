@@ -10,9 +10,9 @@ The fine tuning was carried out with the openAI platform, the dataset contains n
 To run this bot, you'll need to have the following libraries and tools installed:
 
 - Python 3.6 or higher
-- `openai` library (install using `pip install openai`)
-- `requests` library (install using `pip install requests`)
-- `time` library (install using `pip install time`)
+- `openai` library 
+- `requests` library 
+- `time` library 
 - You will also need to create a new chatbot with using `Telegram BotFather`
 
 ## Usage

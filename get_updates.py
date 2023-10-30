@@ -2,6 +2,7 @@ import requests
 import time
 import creds
 
+
 def get_updates(token, offset=None):
     '''
     Get updates from the Telegram chat.
@@ -14,6 +15,7 @@ def get_updates(token, offset=None):
     params = {'offset': offset} if offset else {}
     response = requests.get(url, params=params)
     return response.json()
+
 
 def print_new_messages(token):
     '''
@@ -35,5 +37,6 @@ def print_new_messages(token):
                 print("---")
                 offset = update["update_id"] + 1
         time.sleep(1)  # wait 1s
+
 
 print_new_messages(creds.TOKEN)

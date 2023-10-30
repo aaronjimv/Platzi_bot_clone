@@ -3,6 +3,7 @@ import requests
 import time
 import creds
 
+
 def get_updates(offset):
     '''
     Get updates from the Telegram chat.
@@ -14,6 +15,7 @@ def get_updates(offset):
     params = {"timeout": 100, "offset": offset}
     response = requests.get(url, params=params)
     return response.json()["result"]
+
 
 def send_messages(chat_id, text):
     '''
@@ -27,6 +29,7 @@ def send_messages(chat_id, text):
     params = {"chat_id": chat_id, "text": text}
     response = requests.post(url, params=params)
     return response
+
 
 def get_openai_response(prompt):
     '''
@@ -45,6 +48,7 @@ def get_openai_response(prompt):
         temperature = 0.5
     )
     return response.choices[0].text.strip()
+
 
 def main():
     '''

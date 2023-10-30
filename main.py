@@ -54,7 +54,8 @@ def get_openai_response(prompt):
 
 def main():
     '''
-    The main function that starts the Telegram bot and responds to chat updates.
+    The main function that starts the
+    Telegram bot and responds to chat updates.
     '''
     print("Starting bot...")
     offset = 0
@@ -62,7 +63,7 @@ def main():
         updates = get_updates(offset)
         if updates:
             for update in updates:
-                offset = update["update_id"] +1
+                offset = update["update_id"] + 1
                 chat_id = update["message"]["chat"]['id']
                 user_message = update["message"]["text"]
                 print(f"Received message: {user_message}")
@@ -70,5 +71,7 @@ def main():
                 send_messages(chat_id, GPT)
         else:
             time.sleep(1)
+
+
 if __name__ == '__main__':
     main()
